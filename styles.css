@@ -1,43 +1,77 @@
 body {
-    font-family: Arial, sans-serif;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(360deg, #000000, #f59ca9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.weather-app {
+  background: rgb(250, 158, 173);
+  padding: 25px 35px;
+  border-radius: 15px;
+  box-shadow:
+    0 4px 15px rgba(245, 156, 163, 0.6),
+    0 0 15px rgba(245, 156, 163, 0.7);
+  text-align: center;
+  width: 320px;
+  transform: scale(0.95);
+  animation: popIn 0.5s forwards;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
   }
-  
-  .weather-app {
-    background: rgb(250, 158, 173);
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
-    text-align: center;
-    width: 300px;
-  }
-  
-  input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #aaa;
-  }
-  
-  button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background: red;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: pink;
-  }
-  
-  .weather-result {
-    margin-top: 20px;
-    font-size: 16px;
-  }
+}
+
+.weather-app:hover {
+  box-shadow:
+    0 6px 25px rgba(245, 156, 163, 0.9),
+    0 0 25px rgba(245, 156, 163, 1);
+  transform: scale(1.02);
+}
+
+input {
+  width: 80%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f58298;
+  box-shadow: 0 0 8px rgba(245, 130, 152, 0.7);
+}
+
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  background: #d72638;
+  color: rgb(25, 25, 26);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(215, 38, 56, 0.6);
+}
+
+button:hover {
+  background: #f95c70;
+  box-shadow: 0 6px 20px rgba(249, 92, 112, 0.8);
+}
+
+.weather-result {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #3a0e11;
+  font-weight: 500;
+}
